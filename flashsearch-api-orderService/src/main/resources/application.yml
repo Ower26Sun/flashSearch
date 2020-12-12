@@ -1,0 +1,27 @@
+server:
+  port: 8020
+
+
+mybatis:
+  configuration:
+    # 使用列别名替换列名
+    use-column-label: true
+    # 开启驼峰命名转换
+    map-underscore-to-camel-case: true
+    # 使用jdbc的getGeneratedKeys获取数据库自增主键值
+    use-generated-keys: true
+  mapper-locations: classpath:mapper/*.xml
+
+spring:
+  application:
+    name: flashsearch-paymentservice
+
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.14.68.1:3306/flashsearch?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: Srx123456789@
+
